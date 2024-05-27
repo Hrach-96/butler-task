@@ -1,0 +1,90 @@
+.headerImage{
+	height:805px;
+	background-image: url('/assets/images/main.jpg');
+}
+.headerImageMob{
+	height:660px;
+	background-image: url('/assets/images/main.jpg');
+	background-size: cover;
+}
+.containerHome{
+	max-width:2020px!important;
+}
+.containerHomeMob{
+	max-width:100%!important;
+}
+.header-logo-pc{
+	width:40%;
+}
+.header-logo-mob{
+	width:100%;
+}
+.flagLanguage{
+	max-width:35px;
+	max-height:35px;
+}
+.loginBtnHeader{
+	background: transparent;
+	border:1px solid #81D8D0;
+}
+.btnStyleDes{
+	background: transparent;
+	border:1px solid #79747E;
+	font-weight:bolder;
+}
+.inputBackgroundStyle{
+	background: transparent;
+	color:black;
+	border:1px solid black;
+}
+.inputBackgroundStyle::placeholder {
+  color: black;
+  opacity: 1;
+}
+.headerSlider{
+	margin-top:200px;
+}
+.footerMain{
+	background:#000000;
+	border-top:6px solid #53C2B8;
+}
+.backgroundStyleColor{
+	border: 1px solid #53C2B8;
+	background: #53C2B8;
+}
+.footerUlStyle ul{
+	padding-left:0;
+}
+.footerUlStyle li{
+	list-style-type: none;
+}
+.headerUserNavbar li{
+	list-style-type: none;
+}
+.footerUlStyle li a{
+	color:white;
+	text-decoration: none;
+}
+.footerFollowUsImg{
+	margin-left: 11px; 
+}
+.inputBackground{
+	background: #F8F8F8;
+	border:1px solid #F8F8F8;
+}
+.textBlack{
+	color:black!important;
+	font-weight: bolder;
+}
+.customStyleCursor:hover{
+	cursor: pointer;
+}
+.themeColorText{
+	color:#53C2B8;
+}
+.stonehengeMobSlider div{
+	margin-left:0px;
+}
+.lineHeightStyle{
+	line-height: 19px;
+}
