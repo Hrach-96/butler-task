@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    scrollHeaderFunction();
 	$('.stonehenge').stonehenge({
         speed: 2.0,
     });
@@ -8,4 +9,22 @@ $(document).ready(function(){
     $(document).on('click','.openLoginModal',function(){
     	$(".closeSignupModal").click();
     })
+    $(window).scroll(function () {
+		scrollHeaderFunction();
+	})
+	function scrollHeaderFunction(){
+		var scrollTop = $(document).scrollTop();
+		if(scrollTop > 0){
+			console.log(1411);
+			$(".headerAnimation").addClass('headerAnimationScroll');
+			$(".firstServiceSlider").addClass('marginTopEffect');
+			$(".headerImage").addClass('headerImageScrollEffect');
+			$(".headerImageMob").addClass('headerImageScrollEffect');
+		}else if(scrollTop == 0){
+			$(".headerAnimation").removeClass('headerAnimationScroll');
+			$(".firstServiceSlider").removeClass('marginTopEffect');
+			$(".headerImage").removeClass('headerImageScrollEffect');
+			$(".headerImageMob").removeClass('headerImageScrollEffect');
+		}
+	}
 })

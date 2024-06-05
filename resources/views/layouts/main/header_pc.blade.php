@@ -1,5 +1,5 @@
 <div class='container containerHome headerImage'>
-	<div class='row pt-3'>
+	<div class='row pt-3 headerAnimation pb-2'>
 		<div class='col-md-3 text-end'>
 	        <a href='/'>
 	            <img class='header-logo-pc' src="{{url('assets/images/main-logo.png')}}" alt="img"/>
@@ -14,7 +14,7 @@
 	    </div>
 	    <div class='col-md-2 pt-1'>
 	        @if (Auth::check())
-	            <ul class='headerUserNavbar w-75'>
+	            <ul class='headerUserNavbar'>
 	               <li class="nav-item dropdown no-arrow">
 	                    <a class="nav-link dropdown-toggle btnStyleDes w-100" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	                        <img class="img-profile rounded-circle mr-3" style='width:35px' src="{{url('assets/images/icons/avatar.png')}}">
@@ -22,23 +22,20 @@
 	                    </a>
 	                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
 	                        aria-labelledby="userDropdown">
-	                        <a class="dropdown-item">
+	                        <a class="dropdown-item" href="{{route('profile.addresses')}}">
 	                            Profile & Addresses
 	                        </a>
-	                        <a class="dropdown-item" href="#">
-	                            bookings
+	                        <a class="dropdown-item" href="{{route('bookings')}}">
+	                            Bookings
 	                        </a>
-	                        <a class="dropdown-item" href="#">
+	                        <a class="dropdown-item" href="{{route('credits')}}">
 	                            Credits
 	                        </a>
-	                        <a class="dropdown-item" href="#">
+	                        <a class="dropdown-item" href="{{route('referrals')}}">
 	                            Referrals
 	                        </a>
-	                        <a class="dropdown-item" href="#">
+	                        <a class="dropdown-item" href="{{route('payment.method')}}">
 	                            Your Payment Methods
-	                        </a>
-	                        <a class="dropdown-item" href="#">
-	                            Contact Us
 	                        </a>
 	                        <div class="dropdown-divider"></div>
 	                        <a class="dropdown-item" href="{{route('logout')}}">
@@ -52,6 +49,7 @@
 	           <button class='loginBtnHeader btnStyleDes btn mr-2 pt-1 pb-1 mt-2' data-toggle="modal" data-target="#loginModal">Log In / Sign Up</button>
 	        @endif
 	    </div>
+    
 	    <div class='col-md-6 offset-3 mt-2'>
 		    <div class="stonehenge">
 	            <div>
@@ -89,6 +87,8 @@
 	    <div class='col-md-4 offset-4 mt-4'>
 	    	<input type='text' class='form-control inputBackgroundStyle' placeholder="Search">
 	    </div>
+    </div>
+	<div class='row pt-3 firstServiceSlider'>
         <div class='col-md-8 offset-2 headerSlider'>
             <div class='col-md-12'>
                 <h3 class='textBlack'>General Cleaning</h3>

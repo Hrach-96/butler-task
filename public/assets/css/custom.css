@@ -17,7 +17,7 @@
 	width:40%;
 }
 .header-logo-mob{
-	width:100%;
+	width:170px;
 }
 .flagLanguage{
 	max-width:35px;
@@ -28,11 +28,21 @@
 	border:1px solid #81D8D0;
 }
 .btnStyleDes{
+	background: #A5E9F4;
+	border:1px solid #79747E;
+	font-weight:bolder;
+}
+.btnStyleDesB{
 	background: transparent;
 	border:1px solid #79747E;
 	font-weight:bolder;
 }
 .inputBackgroundStyle{
+	background: #A5E9F4;
+	color:black;
+	border:1px solid black;
+}
+.inputBackgroundStyleB{
 	background: transparent;
 	color:black;
 	border:1px solid black;
@@ -58,8 +68,14 @@
 .footerUlStyle li{
 	list-style-type: none;
 }
+.headerUserNavbar{
+	width:170px;
+}
 .headerUserNavbar li{
 	list-style-type: none;
+}
+.headerUserNavbarMob{
+	width:117px;
 }
 .footerUlStyle li a{
 	color:white;
@@ -76,6 +92,10 @@
 	color:black!important;
 	font-weight: bolder;
 }
+.textBlackNorm{
+	color:black!important;
+	font-weight: 500;
+}
 .customStyleCursor:hover{
 	cursor: pointer;
 }
@@ -87,4 +107,95 @@
 }
 .lineHeightStyle{
 	line-height: 19px;
+}
+.backTabTStyle.active{
+	background:#A6E9DE!important;
+}
+.backTabTStyle{
+	font-size:20px;
+}
+.roundedCustom16{
+	border-radius: 16px;
+}
+.roundedCustom7{
+	border-radius: 7px;
+}
+.textColorTheme{
+	color:#20817C;
+}
+.font-weight-500{
+	font-weight: 500;
+}
+.font-weight-300{
+	font-weight: 300;
+}
+.userProfileImageCircle{
+	background:#53C2B8;
+	width:55px;
+	height:55px;
+}
+.backgroundCustomLightTheme{
+	background:#D3F4EE;
+}
+.myAddressesIt{
+	border:1px solid #53C2B8;
+}
+.backgroundStyleColor:hover{
+	border: 1px solid #2a8179;
+	background: #2a8179;
+}
+.topNavbarTabs button{
+	color:#969696;
+}
+.topNavbarTabs button:hover{
+	color:#1D6865;
+}
+.topNavbarTabs button.active{
+	color:#1D6865!important;
+}
+.topNavbarTabs button{
+	width:99%;
+}
+.topNavbarTabs li{
+	width:50%;
+	background:#F4F4F4;
+}
+.themeColorBadge{
+	background:#D3F4EE;
+}
+.backgroundGreyC{
+	background: #F8F8F8;
+}
+.themeColorHardGreen{
+	color:#20817C;
+}
+.roundedCircleThemeColor{
+	border:1px solid #284F4E;
+}
+.transparentBtnStyle{
+	color:#296360;
+	border:1px solid #296360!important;
+}
+.cardStyle{
+	height:20px;
+}
+.loginIconMob{
+	height:40px;
+}
+.headerAnimation{
+	transition: all 0.7s;
+}
+.headerAnimationScroll{
+	position: fixed;
+	z-index: 9999;
+	top:0;
+	background: white;
+	width: 100%;
+}
+.marginTopEffect{
+	margin-top:200px;
+}
+.headerImageScrollEffect{
+	margin-top:0px;
+	border:1px solid transparent;
 }

@@ -1,5 +1,5 @@
 <div class='container containerHomeMob headerImageMob'>
-	<div class='row pt-3'>
+	<div class='row headerAnimation pt-3'>
 		<div class='col-3'>
             <img class='header-hamburger-icon' src="{{url('assets/images/icons/hamburger-icon.png')}}" alt="img"/>
 		</div>
@@ -11,15 +11,17 @@
 		<div class='col-3 text-end text-white'>
 			@if (Auth::check())
 	        @else
-				<span data-toggle="modal" data-target="#loginModal">log in</span>
+                <img data-toggle="modal" data-target="#loginModal" class='mr-4 loginIconMob' src="{{url('assets/images/icons/login-icon.png')}}" alt="login"/>
 	        @endif
 		</div>
 		<div class='form-group mt-4'>
-			<input type='text' class='form-control' placeholder="Maison Matisse">
+			<input type='text' class='form-control inputBackgroundStyle' placeholder="Maison Matisse">
 		</div>
 		<div class='form-group'>
-			<input type='text' class='form-control' placeholder="Maison Matisse">
+			<input type='text' class='form-control inputBackgroundStyle' placeholder="Maison Matisse">
 		</div>
+    </div>
+    <div class='row pt-3'>
 		<div class="stonehenge stonehengeMobSlider">
             <div>
                 <button class='btn btnStyleDes'>General Cleaning</button>
