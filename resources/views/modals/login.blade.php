@@ -6,26 +6,16 @@
           <img src="{{url('assets/images/icons/close.png')}}" data-dismiss="modal" class="customStyleCursor closeLoginModal" aria-label="Close" alt="img"/>
       </div>
       <div class="modal-body">
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login',['lang'=>getLanguage()]) }}">
             @csrf
             <div class="row mb-3">
                 <div class="col-md-12">
                     <input id="email" type="email" class="form-control inputBackground @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email address">
-                    @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-md-12">
                     <input id="password" type="password" class="form-control inputBackground @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
-                    @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
                 <div class="col-md-12 text-right text-muted mt-3">
                   @if (Route::has('password.request'))

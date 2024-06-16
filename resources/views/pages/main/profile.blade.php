@@ -8,7 +8,7 @@
 		    	@include('layouts.backend.user.left-sidebar')
 			@endif
 		  <div class="col-md-9 col-xs-12 col-sm-12 border pt-4 pb-2 roundedCustom16">
-		      	<p class='textBlackNorm'>Personal information</p>
+		      	<p class='textBlackNorm'>{{__('msg.personal-information')}}</p>
 		      	<div class='col-12'>
 		      		<div class='row backgroundCustomLightTheme roundedCustom16 p-2 pb-0'>
 		      			<div class='col-md-1 col-xs-12 col-sm-12 pt-1'>
@@ -48,7 +48,7 @@
 		      				<div class="form-check">
 							  <input class="form-check-input" type="radio" name="flexRadioDefault" id="maleRadio">
 							  <label class="form-check-label" for="maleRadio">
-							    Male
+							    {{__('msg.male')}}
 							  </label>
 							</div>
 	      				</div>
@@ -56,7 +56,7 @@
 		      				<div class="form-check">
 							  <input class="form-check-input" type="radio" name="flexRadioDefault" id="femaleRadio">
 							  <label class="form-check-label" for="femaleRadio">
-							    Female
+							    {{__('msg.female')}}
 							  </label>
 							</div>
 	      				</div>

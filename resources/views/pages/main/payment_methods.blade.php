@@ -29,7 +29,7 @@
 	                </div>
 	            </div>
 	            <div class='col-md-2 col-xs-12 col-sm-12 offset-md-5 text-center'>
-	            	<a href='{{route('add.new.card')}}' class="btn mt-3 text-white backgroundStyleColor w-100">
+	            	<a href='{{route('add.new.card',['lang'=>getLanguage()])}}' class="btn mt-3 text-white backgroundStyleColor w-100">
                         Add a card
                     </a>
 		  		</div>

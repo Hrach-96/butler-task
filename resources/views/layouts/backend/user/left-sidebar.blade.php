@@ -1,24 +1,24 @@
 <div class="col-3">
 	<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-	  	<a class="nav-link textBlackNorm backTabTStyle {{ Str::contains(url()->current(),"profile-addresses") == 1 ? "active" : "" }}"  href="{{route('profile.addresses')}}">
+	  	<a class="nav-link textBlackNorm backTabTStyle {{ Str::contains(url()->current(),urlencode(__('msg.profille-addresses-route'))) == 1 ? "active" : "" }}"  href="{{route('profile.addresses',['lang'=>getLanguage()])}}">
 	    	<img src="{{url('assets/images/icons/profile.png')}}" class='mr-2' alt="Profile & Addresses"/>
-	  		Profile & Addresses
+			{{ __('msg.profille-addresses') }}
 			</a>
-		<a class="nav-link textBlackNorm backTabTStyle {{ Str::contains(url()->current(),"bookings") == 1 ? "active" : "" }}" href="{{route('bookings')}}">
+		<a class="nav-link textBlackNorm backTabTStyle {{ Str::contains(url()->current(),urlencode(__('msg.bookings-route'))) == 1 ? "active" : "" }}" href="{{route('bookings',['lang'=>getLanguage()])}}">
 	    	<img src="{{url('assets/images/icons/bookings.png')}}" class='mr-2' alt="Bookings"/>
-			Bookings
+			{{ __('msg.bookings') }}
 		</a>
-		<a class="nav-link textBlackNorm backTabTStyle {{ Str::contains(url()->current(),"credits") == 1 ? "active" : "" }}" href="{{route('credits')}}">
+		<a class="nav-link textBlackNorm backTabTStyle {{ Str::contains(url()->current(),urlencode(__('msg.credits-route'))) == 1 ? "active" : "" }}" href="{{route('credits',['lang'=>getLanguage()])}}">
 	    	<img src="{{url('assets/images/icons/credits.png')}}" class='mr-2' alt="Credits"/>
-			Credits
+			{{ __('msg.credits') }}
 		</a>
-		<a class="nav-link textBlackNorm backTabTStyle {{ Str::contains(url()->current(),"referrals") == 1 ? "active" : "" }}" href="{{route('referrals')}}" >
+		<a class="nav-link textBlackNorm backTabTStyle {{ Str::contains(url()->current(),urlencode(__('msg.referrals-route'))) == 1 ? "active" : "" }}" href="{{route('referrals',['lang'=>getLanguage()])}}" >
 	    	<img src="{{url('assets/images/icons/referrals.png')}}" class='mr-2' alt="Referrals"/>
-			Referrals
+			{{ __('msg.referrals') }}
 		</a>
-		<a class="nav-link textBlackNorm backTabTStyle {{ (Str::contains(url()->current(),"add-new-card") == 1 || Str::contains(url()->current(),"payment-method") == 1 ) ? "active" : "" }}" href="{{route('payment.method')}}">
+		<a class="nav-link textBlackNorm backTabTStyle {{ Str::contains(url()->current(),urlencode(__('msg.payment-methods-route'))) == 1 ? "active" : "" }}" href="{{route('payment.method',['lang'=>getLanguage()])}}">
 	    	<img src="{{url('assets/images/icons/payment-methods.png')}}" class='mr-2' alt="Payment methods"/>
-			Payment methods
+			{{ __('msg.payment_methods') }}
 		</a>
 	</div>
 </div>

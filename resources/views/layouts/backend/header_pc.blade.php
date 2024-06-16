@@ -1,7 +1,7 @@
 <div class='container containerHome'>
 	<div class='row pt-3'>
 		<div class='col-md-3 text-end'>
-	        <a href='/'>
+	        <a href='{{route('main',['lang'=>getLanguage()])}}'>
 	            <img class='header-logo-pc' src="{{url('assets/images/main-logo.png')}}" alt="img"/>
 	        </a>
 	    </div>
@@ -9,8 +9,8 @@
 	        <input type='text' class='form-control inputBackgroundStyleB mt-2' placeholder="Maison Matisse">
 	    </div>
 	    <div class='col-md-1 text-center'>
-	        <img src="{{url('assets/images/flags/france.png')}}" class='rounded-circle flagLanguage'>
-	        <h6>France / English</h6>
+	        <img data-toggle="modal" data-target="#changeLanguageModal" src="{{url('assets/images/flags/' . getLanguage() . '.png')}}" class='rounded-circle customStyleCursor flagLanguage'>
+	        <h6 data-toggle="modal" class='customStyleCursor' data-target="#changeLanguageModal">{{otherLanguagesNames()}}</h6>
 	    </div>
 	    <div class='col-md-2 pt-1'>
 	        @if (Auth::check())
@@ -22,27 +22,24 @@
 	                    </a>
 	                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
 	                        aria-labelledby="userDropdown">
-	                        <a class="dropdown-item" href="{{route('profile.addresses')}}">
-	                            Profile & Addresses
+	                        <a class="dropdown-item" href="{{route('profile.addresses',['lang'=>getLanguage()])}}">
+	                            {{__('msg.profille-addresses')}}
 	                        </a>
-	                        <a class="dropdown-item" href="{{route('bookings')}}">
-	                            bookings
+	                        <a class="dropdown-item" href="{{route('bookings',['lang'=>getLanguage()])}}">
+	                            {{__('msg.bookings')}}
 	                        </a>
-	                        <a class="dropdown-item" href="#">
-	                            Credits
+	                        <a class="dropdown-item" href="{{route('credits',['lang'=>getLanguage()])}}">
+	                            {{__('msg.credits')}}
 	                        </a>
-	                        <a class="dropdown-item" href="#">
-	                            Referrals
+	                        <a class="dropdown-item" href="{{route('referrals',['lang'=>getLanguage()])}}">
+	                            {{__('msg.referrals')}}
 	                        </a>
-	                        <a class="dropdown-item" href="#">
-	                            Your Payment Methods
-	                        </a>
-	                        <a class="dropdown-item" href="#">
-	                            Contact Us
+	                        <a class="dropdown-item" href="{{route('payment.method',['lang'=>getLanguage()])}}">
+	                            {{__('msg.payment-methods')}}
 	                        </a>
 	                        <div class="dropdown-divider"></div>
-	                        <a class="dropdown-item" href="{{route('logout')}}">
-	                            Logout
+	                        <a class="dropdown-item" href="{{route('logout',['lang'=>getLanguage()])}}">
+	                            {{__('msg.logout')}}
 	                        </a>
 	                    </div>
 	                </li>

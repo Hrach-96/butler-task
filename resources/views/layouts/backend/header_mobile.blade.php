@@ -4,7 +4,7 @@
             <img class='header-hamburger-icon' src="{{url('assets/images/icons/hamburger-black.png')}}" alt="img"/>
 		</div>
 		<div class='col-6 pl-0 text-center'>
-			<a href="/">
+			<a href="{{route('main',['lang'=>getLanguage()])}}">
             	<img class='header-logo-mob' src="{{url('assets/images/main-logo.png')}}" alt="img"/>
 			</a>
 		</div>
@@ -18,23 +18,23 @@
 	                    </a>
 	                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
 	                        aria-labelledby="userDropdown">
-	                        <a class="dropdown-item" href="{{route('profile.addresses')}}">
+	                        <a class="dropdown-item" href="{{route('profile.addresses',['lang'=>getLanguage()])}}">
 	                            Profile & Addresses
 	                        </a>
-	                        <a class="dropdown-item" href="{{route('bookings')}}">
+	                        <a class="dropdown-item" href="{{route('bookings',['lang'=>getLanguage()])}}">
 	                            Bookings
 	                        </a>
-	                        <a class="dropdown-item" href="{{route('credits')}}">
+	                        <a class="dropdown-item" href="{{route('credits',['lang'=>getLanguage()])}}">
 	                            Credits
 	                        </a>
-	                        <a class="dropdown-item" href="{{route('referrals')}}">
+	                        <a class="dropdown-item" href="{{route('referrals',['lang'=>getLanguage()])}}">
 	                            Referrals
 	                        </a>
-	                        <a class="dropdown-item" href="{{route('payment.method')}}">
+	                        <a class="dropdown-item" href="{{route('payment.method',['lang'=>getLanguage()])}}">
 	                            Your Payment Methods
 	                        </a>
 	                        <div class="dropdown-divider"></div>
-	                        <a class="dropdown-item" href="{{route('logout')}}">
+	                        <a class="dropdown-item" href="{{route('logout',['lang'=>getLanguage()])}}">
 	                            Logout
 	                        </a>
 	                    </div>

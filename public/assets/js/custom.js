@@ -15,7 +15,6 @@ $(document).ready(function(){
 	function scrollHeaderFunction(){
 		var scrollTop = $(document).scrollTop();
 		if(scrollTop > 0){
-			console.log(1411);
 			$(".headerAnimation").addClass('headerAnimationScroll');
 			$(".firstServiceSlider").addClass('marginTopEffect');
 			$(".headerImage").addClass('headerImageScrollEffect');

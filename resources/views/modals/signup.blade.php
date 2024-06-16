@@ -6,24 +6,24 @@
           <img src="{{url('assets/images/icons/close.png')}}" data-dismiss="modal" class="customStyleCurso closeSignupModal" aria-label="Close" alt="img"/>
       </div>
       <div class="modal-body">
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('register',['lang'=>getLanguage()]) }}">
             @csrf
             <div class="row mb-3">
                 <div class="col-md-12">
-                    <input id="signup_name" type="text" class="form-control inputBackground" name="signup_name" required placeholder="Name">
+                    <input id="signup_name" type="text" class="form-control inputBackground" name="name" required placeholder="Name">
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-md-12">
-                    <input id="signup_email" type="signup_email" class="form-control inputBackground" name="signup_email" required placeholder="Email address">
+                    <input id="signup_email" type="signup_email" class="form-control inputBackground" name="email" required placeholder="Email address">
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="col-md-12">
-                    <input id="signup_password" type="password" class="form-control inputBackground" name="signup_password" required placeholder="Password">
+                    <input id="signup_password" type="password" class="form-control inputBackground" name="password" required placeholder="Password">
                 </div>
                 <div class="col-md-12 mt-3">
-                    <input id="repeat-password" type="password" class="form-control inputBackground" name="repeat-password" required placeholder="Repeat Password">
+                    <input id="password-confirm" type="password" class="form-control inputBackground" name="password_confirmation" required placeholder="Repeat Password">
                 </div>
                 <div class="col-md-12 text-center mt-4 text-muted">
                    Have an account? <span class='openLoginModal customStyleCursor themeColorText font-weight-bold' data-toggle="modal" data-target="#loginModal">Log in</span>

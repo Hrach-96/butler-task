@@ -11,15 +11,15 @@
 		    <div class="tab-content">
 		      	<ul class="nav nav-tabs mt-4 topNavbarTabs" role="tablist">
 				  <li class="nav-item" role="presentation">
-				    <button class="nav-link m-1 font-weight-500 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Upcoming</button>
+				    <button class="nav-link m-1 font-weight-500 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">{{__('msg.upcoming')}}</button>
 				  </li>
 				  <li class="nav-item" role="presentation">
-				    <button class="nav-link m-1 font-weight-500" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Past</button>
+				    <button class="nav-link m-1 font-weight-500" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">{{__('msg.past')}}</button>
 				  </li>
 				</ul>
 				<div class="tab-content" id="myTabContent">
 				  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-				  	<p class='text-muted mt-2'>Last 12 hours <img src="{{url('assets/images/icons/information.png')}}" alt="information"/></p>
+				  	<p class='text-muted mt-2'>{{__('msg.last')}} 12 {{__('msg.hours')}} <img src="{{url('assets/images/icons/information.png')}}" alt="information"/></p>
 				  	<div class='row pl-3 pr-3 customStyleCursor' data-toggle="modal" data-target="#bookingsInfo" >
 				  		<div class='col-md-3 col-xs-12 col-sm-12 pl-0 backgroundGreyC'>
 				  			<img src="{{url('assets/images/left-block.png')}}"/>

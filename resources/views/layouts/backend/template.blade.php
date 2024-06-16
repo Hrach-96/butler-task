@@ -14,6 +14,7 @@
 		@yield('content')
 		@include('modals.login')
 		@include('modals.signup')
+		@include('modals.change_language')
 	@if(isMobile() == 1)
 		@include('layouts.main.footer_mobile')
 	@else

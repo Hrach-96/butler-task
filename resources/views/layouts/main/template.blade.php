@@ -12,6 +12,7 @@
 	    @include('layouts.main.header_pc')
 	@endif
 		@yield('content')
+		@include('modals.change_language')
 		@include('modals.login')
 		@include('modals.signup')
 	@if(isMobile() == 1)

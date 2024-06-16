@@ -10,7 +10,7 @@
 		  <div class="col-md-9 col-xs-12 col-sm-12 border pt-3 roundedCustom16 pb-4">
 		    <div class='container'>
 	            <div class='row border-bottom pb-2'>
-	                <div class='col-5 pl-0 textBlackNorm'>Your store credit</div>
+	                <div class='col-5 pl-0 textBlackNorm'>{{__('msg.your-store-credit')}}</div>
 	                <div class='col-7 pr-0 text-end themeColorHardGreen font-weight-500'>
 	                    <img class='p-2 rounded-circle roundedCircleThemeColor' src="{{url('assets/images/icons/euro.png')}}">
 	                    113.68 Eur
@@ -19,15 +19,15 @@
 	            <div class='row backgroundGreyC mt-3 pb-2 roundedCustom16'>
 	                <p class='p-3'>Secure your reservation effortlessly by choosing to use your available credits or explore additional options by selecting the "Buy Credit" feature to enhance your booking experience.</p>
 	                <div class='col-md-6 col-xs-12 col-sm-12 mt-2'>
-	                	<button class='btn transparentBtnStyle w-100'>Book a service</button>
+	                	<button class='btn transparentBtnStyle w-100'>{{__('msg.book-a-service')}}</button>
 	                </div>
 	                <div class='col-md-6 col-xs-12 col-sm-12 mt-2'>
-	                	<button class='btn text-white backgroundStyleColor w-100' data-toggle="modal" data-target="#storeCreditPlan">Buy credit</button>
+	                	<button class='btn text-white backgroundStyleColor w-100' data-toggle="modal" data-target="#storeCreditPlan">{{__('msg.buy-credit')}}</button>
 	                </div>
 	            </div>
 	            <div class='row border-bottom pb-2 mt-3'>
-	                <div class='col-5 pl-0 textBlackNorm'>Available credits</div>
-	                <div class='col-7 pr-0 text-end themeColorHardGreen font-weight-500'>View all</div>
+	                <div class='col-5 pl-0 textBlackNorm'>{{__('msg.available-credits')}}</div>
+	                <div class='col-7 pr-0 text-end themeColorHardGreen font-weight-500'>{{__('msg.view-all')}}</div>
 	            </div>
 	            <div class='row backgroundGreyC mt-2 p-2 pb-3 roundedCustom16'>
 	                <span class='textBlack'>Handyman & Maintenance</span>
