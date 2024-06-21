@@ -1,3 +1,6 @@
+@php
+	$userInfo = Auth::user();
+@endphp
 <div class='container containerHome'>
 	<div class='row pt-3'>
 		<div class='col-md-3 text-end'>
@@ -9,8 +12,11 @@
 	        <input type='text' class='form-control inputBackgroundStyleB mt-2' placeholder="Maison Matisse">
 	    </div>
 	    <div class='col-md-1 text-center'>
-	        <img data-toggle="modal" data-target="#changeLanguageModal" src="{{url('assets/images/flags/' . getLanguage() . '.png')}}" class='rounded-circle customStyleCursor flagLanguage'>
-	        <h6 data-toggle="modal" class='customStyleCursor' data-target="#changeLanguageModal">{{otherLanguagesNames()}}</h6>
+	    	@if($userInfo->userType->variable == 'admin' || $userInfo->userType->variable == 'super-admin')
+	    	@else
+		        <img data-toggle="modal" data-target="#changeLanguageModal" src="{{url('assets/images/flags/' . getLanguage() . '.png')}}" class='rounded-circle customStyleCursor flagLanguage'>
+		        <h6 data-toggle="modal" class='customStyleCursor' data-target="#changeLanguageModal">{{otherLanguagesNames()}}</h6>
+	    	@endif
 	    </div>
 	    <div class='col-md-2 pt-1'>
 	        @if (Auth::check())

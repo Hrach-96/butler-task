@@ -4,6 +4,7 @@
 	<title>Butler Task</title>
 	@include('layouts.main.styles')
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name='csrf-token' content="{{csrf_token()}}" >
 </head>
 <body>
 	@if(isMobile() == 1)

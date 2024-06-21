@@ -31,5 +31,6 @@
 		'personal-information'=>'Personal information',
 		'female'=>'female',
 		'male'=>'male',
+		'service-main-category-list-route'=>'service-main-category-list',
 	];
 ?>

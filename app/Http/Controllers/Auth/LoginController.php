@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use App;
 
 class LoginController extends Controller
 {
@@ -39,6 +41,11 @@ class LoginController extends Controller
     }
     protected function redirectTo() 
     {
+        $userInfo = Auth::user();
+        if($userInfo->userType->variable == 'super-admin' || $userInfo->userType->variable == 'admin'){
+            App::setLocale('en');
+            return route('dashboard');
+        }
         return route('main',['lang'=>getLanguage()]);
     } 
 }

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,4 +39,13 @@ Route::group([ 'prefix' => '/{lang?}' ], function ($lang = 'en') {
 	Auth::routes();
 
 	Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
+// Admin - Super admin
+Route::group(['prefix' => '/admin/'],function(){
+	Route::get('dashboard', [DashboardController::class,'index'])->name('dashboard');
+	// Service Main Category
+	Route::get('service-main-category-list', [ServiceController::class,'service_main_category_list'])->name('service.main.category.list');
+	Route::any('service-main-category-add', [ServiceController::class,'service_main_category_add'])->name('service.main.category.add');
+	Route::any('service-main-category-edit', [ServiceController::class,'service_main_category_edit'])->name('service.main.category.edit');
+	Route::any('service-main-category-delete', [ServiceController::class,'service_main_category_delete'])->name('service.main.category.delete');
 });

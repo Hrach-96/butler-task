@@ -26,4 +26,37 @@ $(document).ready(function(){
 			$(".headerImageMob").removeClass('headerImageScrollEffect');
 		}
 	}
+	$('.simpleDatatableClass').DataTable();
+    $(document).on('click','.btnDelete',function(){
+    	var title = $(this).attr('data-title');
+    	var info = $(this).attr('data-info');
+    	var url = $(this).attr('data-url');
+    	var id = $(this).attr('data-id');
+    	$(".data-delete-info").html(info);
+    	$(".deleteModalTitle").html("Remove " + title);
+    	$(".btnDeleteYes").attr('data-url',url);
+    	$(".btnDeleteYes").attr('data-id',id);
+    	$('.deleteModal').modal('toggle');
+    })
+    $(document).on('click','.btnDeleteYes',function(){
+    	var url = $(this).attr('data-url');
+    	var id = $(this).attr('data-id');
+    	var data = {
+    		id:id
+    	}
+    	// $.ajaxSetup({
+    	// 	headers:{
+    	// 		"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')
+    	// 	}
+    	// })
+    	$.ajax({
+    		type:'POST',
+    		url:url,
+    		data:data,
+    		success:function(resp){
+    			console.log(resp);
+    		}
+    	})
+    	console.log(url);
+    })
 })
